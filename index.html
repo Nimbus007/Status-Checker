@@ -20,33 +20,14 @@
       --shadow: 0 20px 60px rgba(0,0,0,0.35);
       --radius: 22px;
     }
-    /* ===== EXERCISE GIF STYLE ===== */
-
-.exercise-gif {
-  width: 100%;
-  max-width: 220px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 12px;
-  display: block;
-  margin: 10px 0;
-  border: 1px solid rgba(255,255,255,0.08);
-}
-
-.exercise-card {
-  background: rgba(255,255,255,0.04);
-  padding: 14px;
-  border-radius: 14px;
-  margin-bottom: 14px;
-}
-
-.exercise-title {
-  font-weight: 700;
-  margin-bottom: 8px;
-}
 
     * { box-sizing: border-box; }
-    html, body { margin: 0; font-family: Inter, Segoe UI, Arial, sans-serif; background: radial-gradient(circle at top left, #1a2652, #0b1020 46%), #0b1020; color: var(--text); }
+    html, body {
+      margin: 0;
+      font-family: Inter, Segoe UI, Arial, sans-serif;
+      background: radial-gradient(circle at top left, #1a2652, #0b1020 46%), #0b1020;
+      color: var(--text);
+    }
     body { min-height: 100vh; }
     button, input, select, textarea { font: inherit; }
     a { color: inherit; }
@@ -119,7 +100,10 @@
       cursor: pointer;
       transition: 0.2s ease;
     }
-    .tab-btn.active, .tab-btn:hover { background: rgba(124,156,255,0.18); border-color: rgba(124,156,255,0.5); }
+    .tab-btn.active, .tab-btn:hover {
+      background: rgba(124,156,255,0.18);
+      border-color: rgba(124,156,255,0.5);
+    }
 
     .view { display: none; margin-top: 20px; }
     .view.active { display: block; }
@@ -152,6 +136,7 @@
       gap: 10px;
       margin-top: 14px;
     }
+
     .pill {
       padding: 9px 12px;
       border-radius: 999px;
@@ -168,9 +153,16 @@
       margin-top: 14px;
     }
     .input-grid.one { grid-template-columns: 1fr; }
+    .input-grid.two { grid-template-columns: repeat(2, 1fr); }
     .input-grid.three { grid-template-columns: repeat(3, 1fr); }
 
-    label { display: block; font-size: 0.9rem; color: var(--muted); margin-bottom: 6px; }
+    label {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
     input, select, textarea {
       width: 100%;
       background: rgba(255,255,255,0.05);
@@ -180,6 +172,7 @@
       padding: 12px 13px;
       outline: none;
     }
+
     textarea { min-height: 96px; resize: vertical; }
 
     .btn {
@@ -193,15 +186,18 @@
       transition: transform 0.15s ease;
     }
     .btn:hover { transform: translateY(-1px); }
+
     .btn.alt {
       background: linear-gradient(135deg, var(--accent-2), #2bb9aa);
       box-shadow: 0 10px 24px rgba(43, 185, 170, 0.28);
     }
+
     .btn.ghost {
       background: rgba(255,255,255,0.06);
       box-shadow: none;
       border: 1px solid var(--line);
     }
+
     .btn.danger {
       background: linear-gradient(135deg, #ff8282, #ff5d5d);
       box-shadow: 0 10px 24px rgba(255, 93, 93, 0.25);
@@ -228,6 +224,7 @@
       border-collapse: collapse;
       margin-top: 12px;
     }
+
     th, td {
       text-align: left;
       padding: 12px 10px;
@@ -235,10 +232,12 @@
       font-size: 0.94rem;
       vertical-align: top;
     }
+
     th { color: var(--muted); font-weight: 600; }
 
     .amount.plus { color: var(--good); }
     .amount.minus { color: var(--bad); }
+
     .tag {
       display: inline-block;
       padding: 5px 10px;
@@ -287,7 +286,10 @@
       padding: 10px 12px;
       cursor: pointer;
     }
-    .day-btn.active { background: rgba(89,209,195,0.17); border-color: rgba(89,209,195,0.35); }
+    .day-btn.active {
+      background: rgba(89,209,195,0.17);
+      border-color: rgba(89,209,195,0.35);
+    }
 
     .exercise-grid {
       display: grid;
@@ -301,6 +303,8 @@
       border: 1px solid var(--line);
       border-radius: 20px;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
 
     .exercise-figure {
@@ -311,7 +315,22 @@
       font-size: 3rem;
     }
 
+    .exercise-gif-wrap {
+      background: rgba(255,255,255,0.03);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .exercise-gif {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      background: #10172f;
+    }
+
     .exercise-body { padding: 14px; }
+
     .exercise-meta {
       display: flex;
       flex-wrap: wrap;
@@ -327,7 +346,11 @@
       padding-top: 10px;
       border-top: 1px solid var(--line);
     }
-    .checkline input { width: auto; transform: scale(1.2); }
+
+    .checkline input {
+      width: auto;
+      transform: scale(1.2);
+    }
 
     .progress-wrap {
       margin-top: 14px;
@@ -336,6 +359,7 @@
       border: 1px solid var(--line);
       border-radius: 18px;
     }
+
     .progress-bar {
       height: 12px;
       border-radius: 999px;
@@ -343,6 +367,7 @@
       overflow: hidden;
       margin-top: 10px;
     }
+
     .progress-fill {
       height: 100%;
       width: 0%;
@@ -386,9 +411,11 @@
       flex-direction: column;
       gap: 8px;
     }
+
     .day-cell.other-month { opacity: 0.42; }
     .day-cell.today { outline: 2px solid rgba(124,156,255,0.8); }
     .day-number { font-weight: 700; }
+
     .event-pill {
       font-size: 0.8rem;
       padding: 6px 8px;
@@ -430,18 +457,24 @@
     }
 
     @media (max-width: 1100px) {
-      .grid.cols-3, .grid.cols-2, .summary-cards, .exercise-grid { grid-template-columns: 1fr; }
+      .grid.cols-3,
+      .grid.cols-2,
+      .summary-cards,
+      .exercise-grid {
+        grid-template-columns: 1fr;
+      }
       .hero-stats { width: 100%; }
     }
 
     @media (max-width: 740px) {
       .shell { padding: 12px; }
       .hero, .card { padding: 15px; border-radius: 20px; }
-      .input-grid, .input-grid.three { grid-template-columns: 1fr; }
+      .input-grid, .input-grid.three, .input-grid.two { grid-template-columns: 1fr; }
       .calendar-grid { gap: 6px; }
       .weekday, .day-cell { border-radius: 12px; }
       .day-cell { min-height: 90px; padding: 8px; }
       .hero-stats { grid-template-columns: 1fr; }
+      .exercise-gif { height: 200px; }
     }
   </style>
 </head>
@@ -456,7 +489,7 @@
             <span class="pill">Local save in browser</span>
             <span class="pill">Mobile friendly</span>
             <span class="pill">No login needed</span>
-            <span class="pill">GitHub Pages ready</span>
+            <span class="pill">GitHub / Netlify ready</span>
           </div>
         </div>
         <div class="hero-stats">
@@ -722,83 +755,83 @@
       </div>
     </section>
 
-    <div class="footer-note">Built as a single-file website so you can upload one file to GitHub Pages without summoning extra drama.</div>
+    <div class="footer-note">Built as a single-file website so you can upload one file without summoning extra drama.</div>
   </div>
 
   <script>
-    const storageKey = 'statusCheckerDashboardV1';
+    const storageKey = 'statusCheckerDashboardV2';
 
     const defaultGymPlan = {
       Monday: {
         focus: 'Chest + Triceps + Shoulders',
         exercises: [
-          { title: 'Machine Chest Press', sets: '3 x 10-12', muscles: 'Chest / Triceps', alt: 'Dumbbell bench press', figure: '🏋️', tip: 'Keep shoulders back and lower slowly.' },
-          { title: 'Incline Dumbbell Press', sets: '3 x 10-12', muscles: 'Upper Chest / Front Delts', alt: 'Incline machine press', figure: '💪', tip: 'Press up without locking elbows hard.' },
-          { title: 'Cable Chest Fly', sets: '3 x 12-15', muscles: 'Chest', alt: 'Pec deck machine', figure: '🪽', tip: 'Slight elbow bend, squeeze chest at center.' },
-          { title: 'Seated Shoulder Press', sets: '3 x 10-12', muscles: 'Shoulders / Triceps', alt: 'Machine shoulder press', figure: '🔼', tip: 'Brace core and avoid arching your back.' },
-          { title: 'Rope Triceps Pushdown', sets: '3 x 12-15', muscles: 'Triceps', alt: 'Straight-bar pushdown', figure: '🧵', tip: 'Pin elbows to your sides.' },
-          { title: 'Dumbbell Lateral Raise', sets: '3 x 12-15', muscles: 'Side Delts', alt: 'Cable lateral raise', figure: '📐', tip: 'Lift to shoulder height, not into orbit.' }
+          { title: 'Machine Chest Press', sets: '3 x 10-12', muscles: 'Chest / Triceps', alt: 'Dumbbell bench press', figure: '🏋️', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Bench-Press.gif', tip: 'Keep shoulders back and lower slowly.' },
+          { title: 'Incline Dumbbell Press', sets: '3 x 10-12', muscles: 'Upper Chest / Front Delts', alt: 'Incline machine press', figure: '💪', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-Dumbbell-Press.gif', tip: 'Press up without locking elbows hard.' },
+          { title: 'Cable Chest Fly', sets: '3 x 12-15', muscles: 'Chest', alt: 'Pec deck machine', figure: '🪽', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Cable-Crossover.gif', tip: 'Slight elbow bend, squeeze chest at center.' },
+          { title: 'Seated Shoulder Press', sets: '3 x 10-12', muscles: 'Shoulders / Triceps', alt: 'Machine shoulder press', figure: '🔼', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/09/Dumbbell-Shoulder-Press.gif', tip: 'Brace core and avoid arching your back.' },
+          { title: 'Rope Triceps Pushdown', sets: '3 x 12-15', muscles: 'Triceps', alt: 'Straight-bar pushdown', figure: '🧵', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Pushdown.gif', tip: 'Pin elbows to your sides.' },
+          { title: 'Dumbbell Lateral Raise', sets: '3 x 12-15', muscles: 'Side Delts', alt: 'Cable lateral raise', figure: '📐', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lateral-Raise.gif', tip: 'Lift to shoulder height, not into orbit.' }
         ]
       },
       Tuesday: {
         focus: 'Back + Biceps + Rear Delts',
         exercises: [
-          { title: 'Lat Pulldown', sets: '3 x 10-12', muscles: 'Lats / Biceps', alt: 'Assisted pull-up', figure: '⬇️', tip: 'Pull elbows down toward ribs.' },
-          { title: 'Seated Cable Row', sets: '3 x 10-12', muscles: 'Mid Back / Biceps', alt: 'Chest-supported row', figure: '🚣', tip: 'Keep chest tall and squeeze shoulder blades.' },
-          { title: 'Single-Arm Dumbbell Row', sets: '3 x 10 each side', muscles: 'Lats / Mid Back', alt: 'Machine row', figure: '🧱', tip: 'Avoid twisting the torso.' },
-          { title: 'Face Pull', sets: '3 x 12-15', muscles: 'Rear Delts / Upper Back', alt: 'Reverse pec deck', figure: '🎯', tip: 'Pull to eye level and open the hands.' },
-          { title: 'EZ-Bar Curl', sets: '3 x 10-12', muscles: 'Biceps', alt: 'Dumbbell curl', figure: '📈', tip: 'Control the lowering phase.' },
-          { title: 'Hammer Curl', sets: '3 x 12', muscles: 'Biceps / Forearms', alt: 'Rope hammer curl', figure: '🔨', tip: 'Keep elbows close and wrists neutral.' }
+          { title: 'Lat Pulldown', sets: '3 x 10-12', muscles: 'Lats / Biceps', alt: 'Assisted pull-up', figure: '⬇️', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Lat-Pulldown.gif', tip: 'Pull elbows down toward ribs.' },
+          { title: 'Seated Cable Row', sets: '3 x 10-12', muscles: 'Mid Back / Biceps', alt: 'Chest-supported row', figure: '🚣', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Seated-Cable-Row.gif', tip: 'Keep chest tall and squeeze shoulder blades.' },
+          { title: 'Single-Arm Dumbbell Row', sets: '3 x 10 each side', muscles: 'Lats / Mid Back', alt: 'Machine row', figure: '🧱', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/One-Arm-Dumbbell-Row.gif', tip: 'Avoid twisting the torso.' },
+          { title: 'Face Pull', sets: '3 x 12-15', muscles: 'Rear Delts / Upper Back', alt: 'Reverse pec deck', figure: '🎯', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Face-Pull.gif', tip: 'Pull to eye level and open the hands.' },
+          { title: 'EZ-Bar Curl', sets: '3 x 10-12', muscles: 'Biceps', alt: 'Dumbbell curl', figure: '📈', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Curl.gif', tip: 'Control the lowering phase.' },
+          { title: 'Hammer Curl', sets: '3 x 12', muscles: 'Biceps / Forearms', alt: 'Rope hammer curl', figure: '🔨', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Hammer-Curl.gif', tip: 'Keep elbows close and wrists neutral.' }
         ]
       },
       Wednesday: {
         focus: 'Core + Light Shoulders + Cardio',
         exercises: [
-          { title: 'Treadmill Walk or Light Jog', sets: '15-20 min', muscles: 'Cardio', alt: 'Bike or elliptical', figure: '🏃', tip: 'Steady pace. You are training, not fleeing taxes.' },
-          { title: 'Plank', sets: '3 x 30-45 sec', muscles: 'Core', alt: 'Knee plank', figure: '🪵', tip: 'Keep hips level and brace abs.' },
-          { title: 'Cable Woodchopper', sets: '3 x 12 each side', muscles: 'Obliques / Core', alt: 'Russian twist', figure: '🌀', tip: 'Rotate through torso, not just arms.' },
-          { title: 'Hanging Knee Raise', sets: '3 x 10-12', muscles: 'Lower Abs / Hip Flexors', alt: 'Captain’s chair raise', figure: '🦵', tip: 'Lift with abs, not momentum.' },
-          { title: 'Dumbbell Front Raise', sets: '3 x 12', muscles: 'Front Delts', alt: 'Plate raise', figure: '⬆️', tip: 'Raise to shoulder height only.' },
-          { title: 'Reverse Pec Deck', sets: '3 x 12-15', muscles: 'Rear Delts', alt: 'Band pull-apart', figure: '🪽', tip: 'Open chest and move under control.' }
+          { title: 'Treadmill Walk or Light Jog', sets: '15-20 min', muscles: 'Cardio', alt: 'Bike or elliptical', figure: '🏃', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/09/Treadmill-Running.gif', tip: 'Steady pace. You are training, not fleeing taxes.' },
+          { title: 'Plank', sets: '3 x 30-45 sec', muscles: 'Core', alt: 'Knee plank', figure: '🪵', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/plank.gif', tip: 'Keep hips level and brace abs.' },
+          { title: 'Cable Woodchopper', sets: '3 x 12 each side', muscles: 'Obliques / Core', alt: 'Russian twist', figure: '🌀', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Cable-Wood-Chop.gif', tip: 'Rotate through torso, not just arms.' },
+          { title: 'Hanging Knee Raise', sets: '3 x 10-12', muscles: 'Lower Abs / Hip Flexors', alt: 'Captain’s chair raise', figure: '🦵', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Hanging-Knee-Raise.gif', tip: 'Lift with abs, not momentum.' },
+          { title: 'Dumbbell Front Raise', sets: '3 x 12', muscles: 'Front Delts', alt: 'Plate raise', figure: '⬆️', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Front-Raise.gif', tip: 'Raise to shoulder height only.' },
+          { title: 'Reverse Pec Deck', sets: '3 x 12-15', muscles: 'Rear Delts', alt: 'Band pull-apart', figure: '🪽', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/12/Reverse-Pec-Deck-Fly.gif', tip: 'Open chest and move under control.' }
         ]
       },
       Thursday: {
         focus: 'Leg Day',
         exercises: [
-          { title: 'Leg Press', sets: '4 x 10-12', muscles: 'Quads / Glutes', alt: 'Goblet squat', figure: '🦿', tip: 'Drive through midfoot and don’t bounce at bottom.' },
-          { title: 'Romanian Deadlift', sets: '3 x 10', muscles: 'Hamstrings / Glutes', alt: 'Dumbbell RDL', figure: '📏', tip: 'Push hips back and keep spine neutral.' },
-          { title: 'Walking Lunge', sets: '3 x 10 each leg', muscles: 'Quads / Glutes', alt: 'Split squat', figure: '🚶', tip: 'Take controlled steps and keep torso upright.' },
-          { title: 'Leg Curl Machine', sets: '3 x 12', muscles: 'Hamstrings', alt: 'Stability ball curl', figure: '🌀', tip: 'Pause at the squeeze.' },
-          { title: 'Leg Extension', sets: '3 x 12-15', muscles: 'Quads', alt: 'Bodyweight squat finisher', figure: '⚙️', tip: 'Smooth movement, no kicking.' },
-          { title: 'Standing Calf Raise', sets: '4 x 15', muscles: 'Calves', alt: 'Seated calf raise', figure: '🦶', tip: 'Stretch at bottom, squeeze at top.' }
+          { title: 'Leg Press', sets: '4 x 10-12', muscles: 'Quads / Glutes', alt: 'Goblet squat', figure: '🦿', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Leg-Press.gif', tip: 'Drive through midfoot and don’t bounce at bottom.' },
+          { title: 'Romanian Deadlift', sets: '3 x 10', muscles: 'Hamstrings / Glutes', alt: 'Dumbbell RDL', figure: '📏', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Romanian-Deadlift.gif', tip: 'Push hips back and keep spine neutral.' },
+          { title: 'Walking Lunge', sets: '3 x 10 each leg', muscles: 'Quads / Glutes', alt: 'Split squat', figure: '🚶', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Lunge.gif', tip: 'Take controlled steps and keep torso upright.' },
+          { title: 'Leg Curl Machine', sets: '3 x 12', muscles: 'Hamstrings', alt: 'Stability ball curl', figure: '🌀', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Lying-Leg-Curl.gif', tip: 'Pause at the squeeze.' },
+          { title: 'Leg Extension', sets: '3 x 12-15', muscles: 'Quads', alt: 'Bodyweight squat finisher', figure: '⚙️', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Leg-Extension.gif', tip: 'Smooth movement, no kicking.' },
+          { title: 'Standing Calf Raise', sets: '4 x 15', muscles: 'Calves', alt: 'Seated calf raise', figure: '🦶', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Standing-Calf-Raise.gif', tip: 'Stretch at bottom, squeeze at top.' }
         ]
       },
       Friday: {
         focus: 'Chest + Back Strength Day',
         exercises: [
-          { title: 'Barbell or Machine Bench Press', sets: '4 x 6-8', muscles: 'Chest / Triceps', alt: 'Smith machine bench', figure: '🏅', tip: 'Use solid form before chasing heavier weight.' },
-          { title: 'Bent-Over Row', sets: '4 x 8-10', muscles: 'Back / Biceps', alt: 'Chest-supported row', figure: '🧲', tip: 'Keep torso steady and pull elbows back.' },
-          { title: 'Incline Machine Press', sets: '3 x 10', muscles: 'Upper Chest', alt: 'Incline dumbbell press', figure: '📐', tip: 'Control every rep.' },
-          { title: 'Close-Grip Lat Pulldown', sets: '3 x 10', muscles: 'Lats / Biceps', alt: 'Neutral grip assisted pull-up', figure: '🪝', tip: 'Pause briefly at the chest.' },
-          { title: 'Cable Fly', sets: '3 x 12', muscles: 'Chest', alt: 'Pec deck', figure: '🌊', tip: 'Think hug, not slap.' },
-          { title: 'Seated Row Finisher', sets: '3 x 12', muscles: 'Mid Back', alt: 'Machine row', figure: '🎛️', tip: 'Squeeze shoulder blades together.' }
+          { title: 'Barbell or Machine Bench Press', sets: '4 x 6-8', muscles: 'Chest / Triceps', alt: 'Smith machine bench', figure: '🏅', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Bench-Press.gif', tip: 'Use solid form before chasing heavier weight.' },
+          { title: 'Bent-Over Row', sets: '4 x 8-10', muscles: 'Back / Biceps', alt: 'Chest-supported row', figure: '🧲', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Bent-Over-Row.gif', tip: 'Keep torso steady and pull elbows back.' },
+          { title: 'Incline Machine Press', sets: '3 x 10', muscles: 'Upper Chest', alt: 'Incline dumbbell press', figure: '📐', gif: 'https://fitnessprogramer.com/wp-content/uploads/2022/11/Incline-Chest-Press-Machine.gif', tip: 'Control every rep.' },
+          { title: 'Close-Grip Lat Pulldown', sets: '3 x 10', muscles: 'Lats / Biceps', alt: 'Neutral grip assisted pull-up', figure: '🪝', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Close-Grip-Lat-Pulldown.gif', tip: 'Pause briefly at the chest.' },
+          { title: 'Cable Fly', sets: '3 x 12', muscles: 'Chest', alt: 'Pec deck', figure: '🌊', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Cable-Crossover.gif', tip: 'Think hug, not slap.' },
+          { title: 'Seated Row Finisher', sets: '3 x 12', muscles: 'Mid Back', alt: 'Machine row', figure: '🎛️', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Seated-Cable-Row.gif', tip: 'Squeeze shoulder blades together.' }
         ]
       },
       Saturday: {
         focus: 'Rest Day',
         exercises: [
-          { title: 'Rest, mobility, or easy walk', sets: '20-30 min easy', muscles: 'Recovery', alt: 'Stretching', figure: '😌', tip: 'Rest is part of training, not laziness in disguise.' }
+          { title: 'Rest, mobility, or easy walk', sets: '20-30 min easy', muscles: 'Recovery', alt: 'Stretching', figure: '😌', gif: '', tip: 'Rest is part of training, not laziness in disguise.' }
         ]
       },
       Sunday: {
         focus: 'Arms + Core',
         exercises: [
-          { title: 'Cable Triceps Pushdown', sets: '3 x 12', muscles: 'Triceps', alt: 'Machine dip', figure: '📉', tip: 'No shoulder swinging.' },
-          { title: 'Overhead Triceps Extension', sets: '3 x 12', muscles: 'Long Head Triceps', alt: 'Dumbbell extension', figure: '🎯', tip: 'Keep elbows pointed forward.' },
-          { title: 'Alternating Dumbbell Curl', sets: '3 x 12', muscles: 'Biceps', alt: 'Machine curl', figure: '🔁', tip: 'Rotate palms up as you curl.' },
-          { title: 'Preacher Curl', sets: '3 x 10-12', muscles: 'Biceps', alt: 'Cable curl', figure: '⛪', tip: 'Full stretch, controlled lift.' },
-          { title: 'Cable Crunch', sets: '3 x 15', muscles: 'Abs', alt: 'Crunch machine', figure: '🔒', tip: 'Round through the abs, not the hips.' },
-          { title: 'Russian Twist', sets: '3 x 20 total', muscles: 'Obliques / Core', alt: 'Seated plate twist', figure: '🧭', tip: 'Move slow and keep chest proud.' }
+          { title: 'Cable Triceps Pushdown', sets: '3 x 12', muscles: 'Triceps', alt: 'Machine dip', figure: '📉', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Pushdown.gif', tip: 'No shoulder swinging.' },
+          { title: 'Overhead Triceps Extension', sets: '3 x 12', muscles: 'Long Head Triceps', alt: 'Dumbbell extension', figure: '🎯', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Overhead-Triceps-Extension.gif', tip: 'Keep elbows pointed forward.' },
+          { title: 'Alternating Dumbbell Curl', sets: '3 x 12', muscles: 'Biceps', alt: 'Machine curl', figure: '🔁', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Alternating-Dumbbell-Curl.gif', tip: 'Rotate palms up as you curl.' },
+          { title: 'Preacher Curl', sets: '3 x 10-12', muscles: 'Biceps', alt: 'Cable curl', figure: '⛪', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Preacher-Curl.gif', tip: 'Full stretch, controlled lift.' },
+          { title: 'Cable Crunch', sets: '3 x 15', muscles: 'Abs', alt: 'Crunch machine', figure: '🔒', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Cable-Crunch.gif', tip: 'Round through the abs, not the hips.' },
+          { title: 'Russian Twist', sets: '3 x 20 total', muscles: 'Obliques / Core', alt: 'Seated plate twist', figure: '🧭', gif: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Russian-Twist.gif', tip: 'Move slow and keep chest proud.' }
         ]
       }
     };
@@ -830,11 +863,20 @@
     }
 
     function peso(value) {
-      return new Intl.NumberFormat('en-PH', { style: 'currency', currency: 'PHP' }).format(Number(value || 0));
+      return new Intl.NumberFormat('en-PH', {
+        style: 'currency',
+        currency: 'PHP'
+      }).format(Number(value || 0));
     }
 
     function safeText(text) {
-      return String(text ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+      return String(text ?? '').replace(/[&<>"']/g, ch => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+      }[ch]));
     }
 
     function uid() {
@@ -846,8 +888,14 @@
     }
 
     function getBudgetStats() {
-      const incomeAdded = state.transactions.filter(t => t.type === 'income').reduce((sum, t) => sum + Number(t.amount), 0);
-      const expenses = state.transactions.filter(t => t.type === 'expense').reduce((sum, t) => sum + Number(t.amount), 0);
+      const incomeAdded = state.transactions
+        .filter(t => t.type === 'income')
+        .reduce((sum, t) => sum + Number(t.amount), 0);
+
+      const expenses = state.transactions
+        .filter(t => t.type === 'expense')
+        .reduce((sum, t) => sum + Number(t.amount), 0);
+
       const balance = Number(state.salary || 0) + incomeAdded - expenses;
       return { incomeAdded, expenses, balance };
     }
@@ -857,29 +905,46 @@
       const total = plan.exercises.length;
       const checks = state.gymChecks[day] || {};
       const done = plan.exercises.filter(ex => checks[ex.title]).length;
-      return { done, total, percent: total ? Math.round((done / total) * 100) : 0 };
+      return {
+        done,
+        total,
+        percent: total ? Math.round((done / total) * 100) : 0
+      };
     }
 
     function getOverallGymProgress() {
       const days = Object.keys(defaultGymPlan);
       let total = 0;
       let done = 0;
+
       days.forEach(day => {
         total += defaultGymPlan[day].exercises.length;
         done += getGymDayStats(day).done;
       });
-      return { done, total, percent: total ? Math.round((done / total) * 100) : 0 };
+
+      return {
+        done,
+        total,
+        percent: total ? Math.round((done / total) * 100) : 0
+      };
     }
 
     function sortByDate(a, b, key) {
-      return new Date(a[key] + (a.time ? 'T' + a.time : 'T00:00')).getTime() - new Date(b[key] + (b.time ? 'T' + b.time : 'T00:00')).getTime();
+      return new Date(a[key] + (a.time ? 'T' + a.time : 'T00:00')).getTime() -
+             new Date(b[key] + (b.time ? 'T' + b.time : 'T00:00')).getTime();
     }
 
     function renderDashboard() {
-      const { incomeAdded, expenses, balance } = getBudgetStats();
+      const { expenses, balance } = getBudgetStats();
       const allUpcomingEvents = [...state.events].sort((a, b) => sortByDate(a, b, 'date'));
-      const upcomingEvents = allUpcomingEvents.filter(e => new Date(e.date + 'T' + (e.time || '00:00')) >= startOfToday()).slice(0, 5);
-      const upcomingBills = [...state.bills].sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate)).slice(0, 5);
+      const upcomingEvents = allUpcomingEvents
+        .filter(e => new Date(e.date + 'T' + (e.time || '00:00')) >= startOfToday())
+        .slice(0, 5);
+
+      const upcomingBills = [...state.bills]
+        .sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate))
+        .slice(0, 5);
+
       const month = new Date().getMonth();
       const monthEvents = state.events.filter(e => new Date(e.date).getMonth() === month).length;
       const todayName = getDayName(new Date());
@@ -898,25 +963,30 @@
       document.getElementById('heroWorkout').textContent = `${overallGym.percent}%`;
       document.getElementById('heroEvents').textContent = String(upcomingEvents.length);
 
-      document.getElementById('dashboardUpcomingEvents').innerHTML = upcomingEvents.length ? upcomingEvents.map(event => `
-        <div class="event-card">
-          <strong>${safeText(event.title)}</strong>
-          <div class="muted small">${formatDate(event.date)}${event.time ? ' at ' + event.time : ''}</div>
-          ${event.details ? `<div class="small" style="margin-top:6px;">${safeText(event.details)}</div>` : ''}
-        </div>
-      `).join('') : `<div class="empty">No upcoming events yet.</div>`;
+      document.getElementById('dashboardUpcomingEvents').innerHTML = upcomingEvents.length
+        ? upcomingEvents.map(event => `
+          <div class="event-card">
+            <strong>${safeText(event.title)}</strong>
+            <div class="muted small">${formatDate(event.date)}${event.time ? ' at ' + event.time : ''}</div>
+            ${event.details ? `<div class="small" style="margin-top:6px;">${safeText(event.details)}</div>` : ''}
+          </div>
+        `).join('')
+        : `<div class="empty">No upcoming events yet.</div>`;
 
-      document.getElementById('dashboardBills').innerHTML = upcomingBills.length ? upcomingBills.map(bill => `
-        <div class="bill-card">
-          <strong>${safeText(bill.title)}</strong>
-          <div class="muted small">Due ${formatDate(bill.dueDate)}</div>
-          <div style="margin-top:6px;">${peso(bill.amount)}</div>
-        </div>
-      `).join('') : `<div class="empty">No bills logged yet.</div>`;
+      document.getElementById('dashboardBills').innerHTML = upcomingBills.length
+        ? upcomingBills.map(bill => `
+          <div class="bill-card">
+            <strong>${safeText(bill.title)}</strong>
+            <div class="muted small">Due ${formatDate(bill.dueDate)}</div>
+            <div style="margin-top:6px;">${peso(bill.amount)}</div>
+          </div>
+        `).join('')
+        : `<div class="empty">No bills logged yet.</div>`;
     }
 
     function renderBudget() {
       const { incomeAdded, expenses, balance } = getBudgetStats();
+
       document.getElementById('salaryInput').value = state.salary || '';
       document.getElementById('salaryDisplay').textContent = peso(state.salary);
       document.getElementById('incomeDisplay').textContent = peso(incomeAdded);
@@ -924,48 +994,56 @@
       document.getElementById('balanceDisplay').textContent = peso(balance);
 
       const transactions = [...state.transactions].sort((a, b) => sortByDate(b, a, 'date'));
-      document.getElementById('transactionTableWrap').innerHTML = transactions.length ? `
-        <table>
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Date</th>
-              <th>Type</th>
-              <th>Amount</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${transactions.map(t => `
+
+      document.getElementById('transactionTableWrap').innerHTML = transactions.length
+        ? `
+          <table>
+            <thead>
               <tr>
-                <td>
-                  <strong>${safeText(t.title)}</strong><br />
-                  <span class="tag">${safeText(t.category)}</span>
-                  ${t.note ? `<div class="muted small" style="margin-top:6px;">${safeText(t.note)}</div>` : ''}
-                </td>
-                <td>${formatDate(t.date)}</td>
-                <td>${safeText(t.type)}</td>
-                <td class="amount ${t.type === 'income' ? 'plus' : 'minus'}">${t.type === 'income' ? '+' : '-'}${peso(t.amount)}</td>
-                <td><button class="tiny-btn" onclick="deleteTransaction('${t.id}')">Delete</button></td>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Action</th>
               </tr>
-            `).join('')}
-          </tbody>
-        </table>
-      ` : `<div class="empty">No transactions yet. Add one and let arithmetic begin.</div>`;
+            </thead>
+            <tbody>
+              ${transactions.map(t => `
+                <tr>
+                  <td>
+                    <strong>${safeText(t.title)}</strong><br />
+                    <span class="tag">${safeText(t.category)}</span>
+                    ${t.note ? `<div class="muted small" style="margin-top:6px;">${safeText(t.note)}</div>` : ''}
+                  </td>
+                  <td>${formatDate(t.date)}</td>
+                  <td>${safeText(t.type)}</td>
+                  <td class="amount ${t.type === 'income' ? 'plus' : 'minus'}">
+                    ${t.type === 'income' ? '+' : '-'}${peso(t.amount)}
+                  </td>
+                  <td><button class="tiny-btn" onclick="deleteTransaction('${t.id}')">Delete</button></td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        `
+        : `<div class="empty">No transactions yet. Add one and let arithmetic begin.</div>`;
 
       const bills = [...state.bills].sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate));
-      document.getElementById('billList').innerHTML = bills.length ? bills.map(bill => `
-        <div class="bill-card">
-          <strong>${safeText(bill.title)}</strong>
-          <div class="muted small">Due ${formatDate(bill.dueDate)}</div>
-          <div style="margin:8px 0;">${peso(bill.amount)}</div>
-          ${bill.note ? `<div class="small muted">${safeText(bill.note)}</div>` : ''}
-          <div class="bill-actions" style="margin-top:10px;">
-            <button class="tiny-btn" onclick="markBillPaid('${bill.id}')">Mark paid</button>
-            <button class="tiny-btn" onclick="deleteBill('${bill.id}')">Delete</button>
+
+      document.getElementById('billList').innerHTML = bills.length
+        ? bills.map(bill => `
+          <div class="bill-card">
+            <strong>${safeText(bill.title)}</strong>
+            <div class="muted small">Due ${formatDate(bill.dueDate)}</div>
+            <div style="margin:8px 0;">${peso(bill.amount)}</div>
+            ${bill.note ? `<div class="small muted">${safeText(bill.note)}</div>` : ''}
+            <div class="bill-actions" style="margin-top:10px;">
+              <button class="tiny-btn" onclick="markBillPaid('${bill.id}')">Mark paid</button>
+              <button class="tiny-btn" onclick="deleteBill('${bill.id}')">Delete</button>
+            </div>
           </div>
-        </div>
-      `).join('') : `<div class="empty">No bills added yet.</div>`;
+        `).join('')
+        : `<div class="empty">No bills added yet.</div>`;
     }
 
     function renderGym() {
@@ -977,6 +1055,7 @@
       const dayPlan = defaultGymPlan[state.selectedGymDay] || defaultGymPlan.Monday;
       const checks = state.gymChecks[state.selectedGymDay] || {};
       const stats = getGymDayStats(state.selectedGymDay);
+
       document.getElementById('gymProgressText').textContent = `${stats.done} of ${stats.total} exercises done for ${state.selectedGymDay}`;
       document.getElementById('gymProgressFill').style.width = `${stats.percent}%`;
 
@@ -989,6 +1068,11 @@
           ${dayPlan.exercises.map(ex => `
             <div class="exercise-card">
               <div class="exercise-figure">${safeText(ex.figure)}</div>
+              ${ex.gif ? `
+                <div class="exercise-gif-wrap">
+                  <img class="exercise-gif" src="${safeText(ex.gif)}" alt="${safeText(ex.title)} exercise demo" loading="lazy" />
+                </div>
+              ` : ''}
               <div class="exercise-body">
                 <h3>${safeText(ex.title)}</h3>
                 <div class="exercise-meta">
@@ -997,7 +1081,14 @@
                   <span class="tag">Alt: ${safeText(ex.alt)}</span>
                 </div>
                 <div class="small muted">${safeText(ex.tip)}</div>
-                <label class="checkline"><input type="checkbox" ${checks[ex.title] ? 'checked' : ''} onchange="toggleExercise('${state.selectedGymDay}', '${jsEscape(ex.title)}', this.checked)" /> Done</label>
+                <label class="checkline">
+                  <input
+                    type="checkbox"
+                    ${checks[ex.title] ? 'checked' : ''}
+                    onchange="toggleExercise('${state.selectedGymDay}', '${jsEscape(ex.title)}', this.checked)"
+                  />
+                  Done
+                </label>
               </div>
             </div>
           `).join('')}
@@ -1007,7 +1098,11 @@
 
     function renderCalendar() {
       const monthLabel = document.getElementById('calendarMonthLabel');
-      monthLabel.textContent = calendarDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+      monthLabel.textContent = calendarDate.toLocaleDateString('en-US', {
+        month: 'long',
+        year: 'numeric'
+      });
+
       const grid = document.getElementById('calendarGrid');
       const year = calendarDate.getFullYear();
       const month = calendarDate.getMonth();
@@ -1017,10 +1112,12 @@
       const daysInPrevMonth = new Date(year, month, 0).getDate();
       const today = new Date();
       const eventMap = {};
+
       state.events.forEach(event => {
         if (!eventMap[event.date]) eventMap[event.date] = [];
         eventMap[event.date].push(event);
       });
+
       Object.values(eventMap).forEach(arr => arr.sort((a, b) => (a.time || '').localeCompare(b.time || '')));
 
       const weekdays = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
@@ -1048,25 +1145,36 @@
         const iso = toISODate(cellDate);
         const events = eventMap[iso] || [];
         const isToday = iso === toISODate(today);
+
         html += `
           <div class="day-cell ${otherMonth ? 'other-month' : ''} ${isToday ? 'today' : ''}">
             <div class="day-number">${dayNumber}</div>
-            ${events.slice(0, 3).map(e => `<div class="event-pill" title="${safeText(e.title)}">${safeText(e.time ? e.time + ' ' : '')}${safeText(e.title)}</div>`).join('')}
+            ${events.slice(0, 3).map(e => `
+              <div class="event-pill" title="${safeText(e.title)}">
+                ${safeText(e.time ? e.time + ' ' : '')}${safeText(e.title)}
+              </div>
+            `).join('')}
             ${events.length > 3 ? `<div class="muted small">+${events.length - 3} more</div>` : ''}
           </div>
         `;
       }
+
       grid.innerHTML = html;
 
       const upcoming = [...state.events].sort((a, b) => sortByDate(a, b, 'date'));
-      document.getElementById('eventList').innerHTML = upcoming.length ? `<div class="list-stack">${upcoming.map(event => `
-        <div class="event-card">
-          <strong>${safeText(event.title)}</strong>
-          <div class="muted small">${formatDate(event.date)}${event.time ? ' at ' + event.time : ''}</div>
-          ${event.details ? `<div class="small" style="margin-top:6px;">${safeText(event.details)}</div>` : ''}
-          <div class="event-actions" style="margin-top:10px;"><button class="tiny-btn" onclick="deleteEvent('${event.id}')">Delete</button></div>
-        </div>
-      `).join('')}</div>` : `<div class="empty">No events yet.</div>`;
+
+      document.getElementById('eventList').innerHTML = upcoming.length
+        ? `<div class="list-stack">${upcoming.map(event => `
+          <div class="event-card">
+            <strong>${safeText(event.title)}</strong>
+            <div class="muted small">${formatDate(event.date)}${event.time ? ' at ' + event.time : ''}</div>
+            ${event.details ? `<div class="small" style="margin-top:6px;">${safeText(event.details)}</div>` : ''}
+            <div class="event-actions" style="margin-top:10px;">
+              <button class="tiny-btn" onclick="deleteEvent('${event.id}')">Delete</button>
+            </div>
+          </div>
+        `).join('')}</div>`
+        : `<div class="empty">No events yet.</div>`;
     }
 
     function renderAll() {
@@ -1079,7 +1187,11 @@
     function formatDate(iso) {
       if (!iso) return '';
       const date = new Date(iso + 'T00:00');
-      return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      return date.toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric'
+      });
     }
 
     function toISODate(date) {
@@ -1091,7 +1203,7 @@
 
     function startOfToday() {
       const now = new Date();
-      now.setHours(0,0,0,0);
+      now.setHours(0, 0, 0, 0);
       return now;
     }
 
@@ -1123,6 +1235,7 @@
     function markBillPaid(id) {
       const bill = state.bills.find(b => b.id === id);
       if (!bill) return;
+
       state.transactions.push({
         id: uid(),
         title: bill.title,
@@ -1132,6 +1245,7 @@
         date: bill.dueDate || toISODate(new Date()),
         note: bill.note || 'Marked paid from bill list'
       });
+
       state.bills = state.bills.filter(b => b.id !== id);
       saveState();
     }
@@ -1144,8 +1258,10 @@
     document.getElementById('mainTabs').addEventListener('click', e => {
       const btn = e.target.closest('.tab-btn');
       if (!btn) return;
+
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+
       document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
       document.getElementById(btn.dataset.view + 'View').classList.add('active');
     });
@@ -1162,10 +1278,18 @@
       const category = document.getElementById('transactionCategory').value;
       const date = document.getElementById('transactionDate').value || toISODate(new Date());
       const note = document.getElementById('transactionNote').value.trim();
-      if (!title || amount <= 0) return alert('Add a title and a valid amount. Numbers matter.');
+
+      if (!title || amount <= 0) {
+        return alert('Add a title and a valid amount. Numbers matter.');
+      }
+
       state.transactions.push({ id: uid(), title, amount, type, category, date, note });
-      ['transactionTitle','transactionAmount','transactionNote'].forEach(id => document.getElementById(id).value = '');
-      document.getElementById('transactionDate').value = '';
+
+      ['transactionTitle', 'transactionAmount', 'transactionNote'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+
+      document.getElementById('transactionDate').value = toISODate(new Date());
       saveState();
     });
 
@@ -1174,9 +1298,18 @@
       const amount = Number(document.getElementById('billAmount').value || 0);
       const dueDate = document.getElementById('billDueDate').value || toISODate(new Date());
       const note = document.getElementById('billNote').value.trim();
-      if (!title || amount <= 0) return alert('Add a bill name and amount. The utility company insists on details.');
+
+      if (!title || amount <= 0) {
+        return alert('Add a bill name and amount. The utility company insists on details.');
+      }
+
       state.bills.push({ id: uid(), title, amount, dueDate, note });
-      ['billTitle','billAmount','billNote','billDueDate'].forEach(id => document.getElementById(id).value = '');
+
+      ['billTitle', 'billAmount', 'billNote'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+      document.getElementById('billDueDate').value = toISODate(new Date());
+
       saveState();
     });
 
@@ -1185,15 +1318,35 @@
       const date = document.getElementById('eventDate').value;
       const time = document.getElementById('eventTime').value;
       const details = document.getElementById('eventDetails').value.trim();
-      if (!title || !date) return alert('Add an event title and date first. Time itself is chaotic enough.');
+
+      if (!title || !date) {
+        return alert('Add an event title and date first. Time itself is chaotic enough.');
+      }
+
       state.events.push({ id: uid(), title, date, time, details });
-      ['eventTitle','eventDate','eventTime','eventDetails'].forEach(id => document.getElementById(id).value = '');
+
+      ['eventTitle', 'eventTime', 'eventDetails'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+      document.getElementById('eventDate').value = toISODate(new Date());
+
       saveState();
     });
 
-    document.getElementById('prevMonthBtn').addEventListener('click', () => { calendarDate = new Date(calendarDate.getFullYear(), calendarDate.getMonth() - 1, 1); renderCalendar(); });
-    document.getElementById('nextMonthBtn').addEventListener('click', () => { calendarDate = new Date(calendarDate.getFullYear(), calendarDate.getMonth() + 1, 1); renderCalendar(); });
-    document.getElementById('todayMonthBtn').addEventListener('click', () => { calendarDate = new Date(); renderCalendar(); });
+    document.getElementById('prevMonthBtn').addEventListener('click', () => {
+      calendarDate = new Date(calendarDate.getFullYear(), calendarDate.getMonth() - 1, 1);
+      renderCalendar();
+    });
+
+    document.getElementById('nextMonthBtn').addEventListener('click', () => {
+      calendarDate = new Date(calendarDate.getFullYear(), calendarDate.getMonth() + 1, 1);
+      renderCalendar();
+    });
+
+    document.getElementById('todayMonthBtn').addEventListener('click', () => {
+      calendarDate = new Date();
+      renderCalendar();
+    });
 
     document.getElementById('resetBudgetBtn').addEventListener('click', () => {
       if (!confirm('Reset salary, bills, and transactions?')) return;
